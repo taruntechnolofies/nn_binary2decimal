@@ -6,8 +6,9 @@ import tensorflow as tf
 #----------------------------------global variables------------------------------------
 
 #number of bits in binary, also the inputs to the nn
-# if you increase the bits the, NN is not very good for that;
-# because number of samples increases exponentially
+# if you increase the bits the, this training part is not very good for that;
+# because number of samples increases exponentially, and lot of time is waisted in copying data
+#but if you use pipeline or constant instead of feed_dic, the train time can be reduced significantly
 n_inputs = 8
 #number of neuraon in layers
 n_layer1 = 6
